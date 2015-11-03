@@ -4,6 +4,7 @@
 class Shopping extends CI_Controller
 {
     public function index(){
-        echo '<h2>This is my shopping page</h2>';
+        //$this method loads the view
+        $this->load->view('shopping_cart');
     }
 }
