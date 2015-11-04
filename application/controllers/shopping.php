@@ -4,23 +4,20 @@
 class Shopping extends CI_Controller
 {
     public function index(){
+
         //$this method loads the view
         $data['main_content'] = 'login_form'; //create a new key for this variable to load in view
-        $this->load->view('templates/navigation'); //load navigation view
-        $this->load->view('templates/header');  //load header view
-        $this->load->view('shopping_cart'); //load shopping cart (main) view
-        $this->load->view('templates/footer'); //load footer view
-//
-//
-//
-//          What's wrong with this????
 
-//        $this->load->view('includes/template');
+        $this->load->view('templates/navigation'); //load navigation view
 //
+//        $this->load->view('templates/header');  //load header view
+
+        $this->load->view('shopping_cart'); //load shopping cart (main) view
 //
-//
-//
-// //
+//        $this->load->view('templates/footer'); //load footer view
+
+        $this->load->view('includes/template', $data); //load template with two parameters, template and $data(main_content) variable
+
 
     }
 }

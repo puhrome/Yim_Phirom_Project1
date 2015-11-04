@@ -2,7 +2,7 @@
 <div class="container">
     <h1>Footer Part</h1>
     <footer>
-        &copy 2015 | P. Yim
+        &copy 2015 P. Yim | All Rights Reserved.
     </footer>
 </div>
 
