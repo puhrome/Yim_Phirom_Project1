@@ -26,7 +26,7 @@ body {
     width: 50%;
     background-color: #00B5B5;
     margin: 0 auto;
-    padding: 5%;
+    padding: 2%;
 
 }
 
@@ -53,31 +53,67 @@ h1 {
     width: 100%;
 }
 
+#menu {
+    padding: 0;
+    margin: 0 auto;
+}
+#search {
+    border-radius: 0;
+}
 /*---- Form, Input, & Button -- Styling---*/
 
 
-input {
+input, form>a {
     width: 95%;
     display: inline;
     padding: 4% 1%;
     margin: 2% 3%;
     border: none;
     border-radius: 1px;
+    color: #3E4651;
+    text-transform: uppercase;
+    font-family: "Helvetica", Arial, sans-serif;
+    font-size: .75em;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-emphasis: dot;
 }
 
 input:hover {
+    background-color: #d4d4d4;
 
 }
 
-input[type="submit"] {
+input[type="submit"]  {
     background-color: #3E4651;
     text-align: center;
     border-radius: 1px;
     border: none;
     color: #ffffff;
+    text-transform: uppercase;
+}
+input[type="submit"]:hover {
+    background-color: #8B949E;
+    color: #3E4651;
+
+}
+form a {
+    color: #fff;
+    display: block;
+    width: 95%;
+    background-color: #d4d4d4;
+    text-align: center;
 }
 
+form a:hover {
+    background-color: #C5D8D7;
+    text-decoration: none;
+    color: #00B5B5;
+}
+input[type="text"], input[type="password"] {
+    display: block;
+    padding-left: 1%;
+}
 form {
     margin: 0;
-    padding: 4%;
 }
