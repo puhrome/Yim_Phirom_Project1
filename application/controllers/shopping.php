@@ -2,7 +2,15 @@
 
 
 class Shopping extends CI_Controller
+
 {
+    function __construct()
+    {
+        parent::__construct();
+
+        $this->load->database();
+    }
+
     public function index(){
 
         //$this method loads the view

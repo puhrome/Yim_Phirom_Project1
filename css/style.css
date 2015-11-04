@@ -1,0 +1,81 @@
+
+/*---- @fontface -- Typography -- Styling---*/
+
+@font-face {
+    font-family: 'bebasregular';
+    src: url('myfonts/BEBAS___-webfont.eot');
+    src: url('myfonts/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
+    url('myfonts/BEBAS___-webfont.woff') format('woff'),
+    url('myfonts/BEBAS___-webfont.ttf') format('truetype'),
+    url('myfonts/BEBAS___-webfont.svg#bebasregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*---- body -- html -- styling ---*/
+body {
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+/*---- Container, DIV -- Styling---*/
+
+#login_form {
+    width: 30%;
+    background-color: #00B5B5;
+    margin: 0 auto;
+    padding: 1% 2%;
+
+}
+
+/*---- Header, h1, h2, p -- Styling---*/
+
+h1 {
+    font-family: 'Bebas', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#login_form h1{
+    text-align: center;
+    padding: 1%;
+    margin: 0 auto;
+}
+/*---- Navigation, ul, li, a -- Styling---*/
+
+.navbar {
+    border-radius: 1px;
+    background-color: #3E4651;
+    color: #d4d4d4;
+    border: 1px solid #3E4651;
+    width: 100%;
+}
+
+/*---- Form, Input, & Button -- Styling---*/
+
+input {
+    width: 100%;
+    display: inline;
+    padding: 2% 1%;
+    margin: 2% 3%;
+    border: none;
+    border-radius: 1px;
+}
+
+input:hover {
+
+}
+
+input[type="submit"] {
+    background-color: #3E4651;
+    text-align: center;
+    border-radius: 1px;
+    border: none;
+    color: #ffffff;
+}
+
+form {
+    display: inline;
+}
