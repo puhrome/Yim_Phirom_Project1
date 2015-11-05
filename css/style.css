@@ -52,7 +52,9 @@ h1 {
     border: 1px solid #3E4651;
     width: 100%;
 }
-
+.navbar-brand {
+    color: #F1654C;
+}
 #menu {
     padding: 0;
     margin: 0 auto;
@@ -80,7 +82,7 @@ input, form>a {
 }
 
 input:hover {
-    background-color: #d4d4d4;
+    background-color: #C5D8D7;
 
 }
 
@@ -106,9 +108,9 @@ form a {
 }
 
 form a:hover {
-    background-color: #C5D8D7;
+    background-color: #F1654C;
     text-decoration: none;
-    color: #00B5B5;
+    color: #3E4651;
 }
 input[type="text"], input[type="password"] {
     display: block;
