@@ -1,12 +1,14 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 
-class Items extends CI_Model
-
+class Items extends MY_Model
 {
+    const DB_TABLE = 'items';
+    const DB_TABLE_PK = 'itemId';
+
     //variable - int
     //Unique Identifier
-    public $itemsId;
+    public $itemId;
 
     //var - string
     public $itemName;

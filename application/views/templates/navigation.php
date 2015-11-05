@@ -21,9 +21,9 @@
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign In <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
+                    <li class="dropdown" id="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="img-responsive" id="img_log"><img src="assets/images/login_icon_03.png" height="30" width="30"></span></a>
+                    <ul class="dropdown-menu">
                             <li><a href="#">Sign In</a></li>
                             <li><a href="#">Sign Out</a></li>
                             <li><a href="#">Register</a></li>

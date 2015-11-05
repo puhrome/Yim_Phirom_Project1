@@ -1,9 +1,12 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 
-class Users extends CI_Model
+class Users extends MY_Model
 
 {
+    const DB_TABLE = 'users';
+    const DB_TABLE_PK = 'userId';
+
     //Unique Identifier
     //var - int
     public $userId;
@@ -12,6 +15,9 @@ class Users extends CI_Model
     //var - int
     public $itemId;
 
+    //var - int
+    public $firstName;
+
     //var - string
     public $lastName;
 
@@ -19,12 +25,18 @@ class Users extends CI_Model
     public $username;
 
     //var - string
-    public $email;
+    public $userEmail;
+
+    //var - string
+    public $fbUserName;
 
     //var - int
     public $password;
 
     //var - string
     public $address;
+
+    //var - string
+    public $phone;
 
 }

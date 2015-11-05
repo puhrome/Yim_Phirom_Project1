@@ -7,6 +7,7 @@
  */
 ?>
 <div class="container input-group" id="login_form">
+    <div class="container-fluid">
     <h1>LOGIN</h1>
 
     <?php
@@ -32,4 +33,6 @@
 <!---->
 <!--    <div><input type="submit" value="Submit" /></div>-->
 <!--</form>-->
+
+    </div>
 </div>
