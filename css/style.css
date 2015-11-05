@@ -24,15 +24,15 @@ body {
 
 #login_form {
     width: 50%;
-    background-color: #00B5B5;
+    background-color: #F1654C;
     margin: 15% auto;
     padding: 2%;
-    border-radius: 20px;
-    border: 4px solid #00B5B5;
+    border-radius: 10px;
+    border: 4px solid #F1654C;
 
 }
 
-/*---- Header, h1, h2, p -- Styling---*/
+/*---- Header, h1, h2, p, footer -- Styling---*/
 
 h1 {
     font-family: 'Bebas', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -45,17 +45,26 @@ h1 {
     padding: 1%;
     margin: 0 auto;
 }
+
+footer {
+    background-color: #3E4651;
+    border: 1px solid #3E4651;
+    color: #d4d4d4;
+    text-align: center;
+    padding: 5%;
+}
 /*---- Navigation, ul, li, a -- Styling---*/
 
 
-.navbar {
-    border-radius: 1px;
+.navbar, .navbar-inverse {
+    border-radius: 0;
     background-color: #3E4651;
     color: #d4d4d4;
     border: 1px solid #3E4651;
     width: 100%;
+    margin: 0 auto;
 }
-.navbar-brand {
+.navbar-inverse .navbar-brand {
     color: #F1654C;
 }
 #menu {
@@ -90,6 +99,7 @@ a.dropdown-toggle:hover#img_log {
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
     background-color: transparent;
 }
+
 /*---- Form, Input, & Button -- Styling---*/
 
 
@@ -99,7 +109,7 @@ input, form>a {
     padding: 4% 1%;
     margin: 2% 3%;
     border: none;
-    border-radius: 1px;
+    border-radius: 3px;
     color: #3E4651;
     text-transform: uppercase;
     font-family: "Helvetica", Arial, sans-serif;
@@ -119,15 +129,15 @@ input:hover {
 }
 
 input[type="submit"]  {
-    background-color: #3E4651;
+    background-color:  #8B949E;
     text-align: center;
     border-radius: 1px;
     border: none;
-    color: #ffffff;
+    color: #fff;
     text-transform: uppercase;
 }
 input[type="submit"]:hover {
-    background-color: #8B949E;
+    background-color: #d4d4d4;
     color: #3E4651;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
@@ -135,17 +145,17 @@ input[type="submit"]:hover {
     transition: all .5s ease-in-out;
 }
 form a {
-    color: #3E4651;
+    color: #ffffff;
     display: block;
     width: 95%;
-    background-color: #d4d4d4;
+    background-color: #3E4651;
     text-align: center;
 }
 
 form a:hover {
-    background-color: #F1654C;
+    background-color: #d4d4d4;
     text-decoration: none;
-    color: #ffffff;
+    color: #3E4651;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -155,6 +165,8 @@ form a:hover {
 input[type="text"], input[type="password"] {
     display: block;
     padding-left: 1%;
+    border-radius: 3px;
+
 }
 form {
     margin: 0;
