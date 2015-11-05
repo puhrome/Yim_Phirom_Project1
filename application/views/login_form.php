@@ -8,7 +8,7 @@
 ?>
 <div class="container input-group" id="login_form">
     <div class="container-fluid">
-    <h1>LOGIN</h1>
+    <h1>Hello, Friend</h1>
 
     <?php
     echo form_open('login/validate_credentials');

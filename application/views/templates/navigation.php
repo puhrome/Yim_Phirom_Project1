@@ -1,4 +1,4 @@
-<div class="container-fluid" id="menu">
+<div class="container-fluid" >
     <nav class="navbar navbar-inverse navbar-default">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -9,11 +9,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Arabica Trade Co.</a>
+                <a class="navbar-brand" href="#" id="logo"><img src="assets/images/aco_logo_03.png" class="img-responsive" width="50px" height="50px"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1 id="menu"">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
                     <li><a href="#">About</a></li>

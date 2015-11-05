@@ -13,21 +13,32 @@ class Shopping extends CI_Controller
 
     public function index(){
 
-        //load Items Model
+        $data = array();
         $this->load->model('Items');
-        $this->Items->itemName = "Ethiopia";
-        $this->Items->save();
-//        echo '<pre>' . var_export($this->Items, TRUE) . '</pre>';
+        $items = new Items();
+        $items->load(1);
+        $data['items'] = $items;
 
-        //load Users Model
+        $data = array();
         $this->load->model('Users');
         $users = new Users();
-        $users->itemId = $this->Items->itemId;
-        $users->firstName = 'Jane';
-        $users->lastName = 'Doe';
-        $users->username = 'jdoe345';
-        $users->save();
-//        echo '<pre>' . var_export($users, TRUE) . '</pre>';
+        
+//
+//        //load Items Model
+//        $this->load->model('Items');
+//        $this->Items->itemName = "Ethiopia";
+//        $this->Items->save();
+////        echo '<pre>' . var_export($this->Items, TRUE) . '</pre>';
+//
+//        //load Users Model
+//        $this->load->model('Users');
+//        $users = new Users();
+//        $users->itemId = $this->Items->itemId;
+//        $users->firstName = 'Jane';
+//        $users->lastName = 'Doe';
+//        $users->username = 'jdoe345';
+//        $users->save();
+////        echo '<pre>' . var_export($users, TRUE) . '</pre>';
 
         //$this method loads the view
         $data['main_content'] = 'login_form'; //create a new key for this variable to load in view
