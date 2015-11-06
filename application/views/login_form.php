@@ -36,7 +36,7 @@
 
                 <input type="text" name="email" value="email" size="50" />
 
-                <input type="button" name="Sign Up" value="email" size="50" />
+                <input type="submit" name="Sign Up" value="sign up" size="50" />
 
             </div>
         </div>
