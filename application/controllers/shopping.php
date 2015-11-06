@@ -19,7 +19,7 @@ class Shopping extends CI_Controller
         $items->load(1);
         $data['items'] = $items;
 
-        echo '<pre>' . var_export($items, TRUE) . '</pre>';
+//        echo '<pre>' . var_export($items, TRUE) . '</pre>';
 
 
         $this->load->model('Users');
@@ -27,7 +27,7 @@ class Shopping extends CI_Controller
         $users->load(1);
         $data['user'] = $users;
 
-        echo '<pre>' . var_export($users, TRUE) . '</pre>';
+//        echo '<pre>' . var_export($users, TRUE) . '</pre>';
 
 //
 //        //load Items Model

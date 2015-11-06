@@ -18,7 +18,9 @@
     echo form_input('username', 'Username');
     echo form_password('password', 'Password');
     echo form_submit('submit', 'Login');
-    echo form_checkbox('checkbox', 'Remember Me');
+    echo form_checkbox('checkbox', '<h1>Remember Me</h1>');
+
+    echo anchor('login/signup', 'Create Account'); //anchor tag links to a new php page
 
     ?>
 
@@ -26,9 +28,8 @@
 
     <?php echo form_open('form'); ?>
 
-        <h1>or</h1>
-
-        <h2>Create Account</h2>
+    <h1>or</h1>
+    <h2>Create Account</h2>
 
 
     <input type="text" name="username" value="username" size="50" />
@@ -40,7 +41,7 @@
     <input type="text" name="email" value="email" size="50" />
 
     <?php
-    echo anchor('login/signup', 'Create Account'); //anchor tag links to a new php page
+    echo anchor('login/signup', 'Signup'); //anchor tag links to a new php page
 
     ?>
 
