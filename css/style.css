@@ -131,7 +131,7 @@ a.dropdown-toggle:hover#img_log {
 /*---- Form, Input, & Button -- Styling---*/
 
 
-input, form>a {
+input, form>a, #btn {
     width: 95%;
     display: inline;
     padding: 4% 1%;
