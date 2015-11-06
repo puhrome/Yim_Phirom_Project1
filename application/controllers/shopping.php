@@ -19,10 +19,16 @@ class Shopping extends CI_Controller
         $items->load(1);
         $data['items'] = $items;
 
-        $data = array();
+        echo '<pre>' . var_export($items, TRUE) . '</pre>';
+
+
         $this->load->model('Users');
         $users = new Users();
-        
+        $users->load(1);
+        $data['user'] = $users;
+
+        echo '<pre>' . var_export($users, TRUE) . '</pre>';
+
 //
 //        //load Items Model
 //        $this->load->model('Items');
@@ -47,7 +53,7 @@ class Shopping extends CI_Controller
         //
         //        $this->load->view('templates/header');  //load header view
 
-        $this->load->view('shopping_cart'); //load shopping cart (main) view
+        $this->load->view('shopping_cart', $data); //load shopping cart (main) view
         //
         //        $this->load->view('templates/footer'); //load footer view
 

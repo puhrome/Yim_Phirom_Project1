@@ -32,6 +32,10 @@ body {
 
 }
 
+.container {
+    width: 100%;
+    padding: 0;
+}
 /*---- Header, h1, h2, p, footer -- Styling---*/
 
 h1 {
@@ -40,12 +44,28 @@ h1 {
     letter-spacing: 2px;
 }
 
+h2 {
+    font-family: 'Pacifico', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0 auto;
+    color: #ffffff;
+    text-align: left;
+    text-shadow: 1px 1px 1px #d4d4d4;
+    font-size: 2em;
+    padding: 2% 3% 1%;
+}
 #login_form h1{
     text-align: center;
-    padding: 1%;
+    padding: 3%;
     margin: 0 auto;
 }
 
+
+p, a {
+    font-family: 'Avenir', cursive;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: .75em;
+}
 footer {
     background-color: #3E4651;
     border: 1px solid #3E4651;
@@ -63,6 +83,7 @@ footer {
     border: 1px solid #3E4651;
     width: 100%;
     margin: 0 auto;
+    padding: 0 5%;
 }
 .navbar-inverse .navbar-brand {
     color: #F1654C;
@@ -151,6 +172,10 @@ input[type="submit"]:hover {
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
 }
+
+input[type="checkbox"] {
+    margin: 3%;
+}
 form a {
     color: #ffffff;
     display: block;
@@ -171,9 +196,14 @@ form a:hover {
 
 input[type="text"], input[type="password"] {
     display: block;
-    padding-left: 1%;
+    padding-left: 3%;
     border-radius: 3px;
+    font-size: 1em;
+    letter-spacing: 2px;
 
+}
+
+input[type="text"]:hover, input[type="password"]:hover {
 }
 form {
     margin: 0;

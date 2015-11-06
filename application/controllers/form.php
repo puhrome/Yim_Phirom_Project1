@@ -24,5 +24,10 @@ class Form extends CI_Controller {
         {
             $this->load->view('formsuccess');
         }
+
+        $this->form_validation->set_rules('username', 'Username', 'required');
+        $this->form_validation->set_rules('password', 'Password', 'required');
+        $this->form_validation->set_rules('passconf', 'Password Confirmation', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required');
     }
 }
