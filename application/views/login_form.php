@@ -9,7 +9,7 @@
 <div class="container input-group" id="login_form">
     <div class="container-fluid">
 
-        <h1>Hello, Friend</h1>
+        <h1>Hello</h1>
 
         <h2>Login</h2>
 
@@ -17,8 +17,14 @@
         echo form_open('login/validate_credentials');
         echo form_input('username', 'Username');
         echo form_password('password', 'Password');
+        ?>
+
+    <div class="checkbox container-fluid">
+        <input type="checkbox" value="remember-me"> Remember me
+    </div>
+
+        <?php
         echo form_submit('submit', 'Login');
-        echo form_checkbox('checkbox', 'Remember Me');
         ?>
 
         <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" value="Create Account" id="btn">Create Account</button>
@@ -36,7 +42,7 @@
 
                 <input type="text" name="email" value="email" size="50" />
 
-                <input type="submit" name="Sign Up" value="sign up" size="50" />
+                <input type="button" name="Sign Up" value="sign up" size="50" />
 
             </div>
         </div>

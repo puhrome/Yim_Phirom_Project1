@@ -12,6 +12,16 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Learning Curve';
+    src: url('myfonts/LearningCurve_OT-webfont.eot');
+    src: url('myfonts/LearningCurve_OT-webfont.eot?#iefix') format('embedded-opentype'),
+    url('myfonts/LearningCurve_OT-webfont.woff') format('woff'),
+    url('myfonts/LearningCurve_OT-webfont.ttf') format('truetype'),
+    url('myfonts/LearningCurve_OT-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 /*---- body -- html -- styling ---*/
 body {
     background-color: #ffffff;
@@ -36,21 +46,23 @@ body {
     width: 100%;
     padding: 0;
 }
+.well {
+    background-color: #d4d4d4;
+}
 /*---- Header, h1, h2, p, footer -- Styling---*/
 
 h1 {
     font-family: 'Bebas', "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
 h2 {
-    font-family: 'Pacifico', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Learning Curve','Pacifico', "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0 auto;
     color: #ffffff;
     text-align: left;
-    text-shadow: 1px 1px 1px #d4d4d4;
-    font-size: 2em;
+    text-shadow: 1px 1px 1px #222;
+    font-size: 3em;
     padding: 2% 3% 1%;
 }
 #login_form h1{
@@ -71,7 +83,8 @@ footer {
     border: 1px solid #3E4651;
     color: #d4d4d4;
     text-align: center;
-    padding: 5%;
+    padding: 10% 0 20%;
+    margin: 0 auto;
 }
 /*---- Navigation, ul, li, a -- Styling---*/
 
@@ -156,23 +169,42 @@ input:hover {
 
 }
 
-input[type="submit"] {
-    background-color:  #8B949E;
+input[type="submit"], {
+    background-color:  #d4d4d4;
     text-align: center;
     border-radius: 1px;
     border: none;
     color: #fff;
     text-transform: uppercase;
 }
-input[type="submit"]:hover {
-    background-color: #d4d4d4;
-    color: #3E4651;
+input[type="submit"]:hover,  {
+    background-color: #3E4651;
+    color: #d4d4d4;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
 }
 
+input[type="button"] {
+    background-color: #00B5B5;
+    color: #ffffff;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+
+}
+
+input[type="button"]:hover {
+    background-color: #ffffff;
+    color: #222;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+
+}
 input[type="checkbox"] {
     margin: 3%;
 }
@@ -194,6 +226,7 @@ form a:hover, #btn:hover  {
     transition: all .5s ease-in-out;
 }
 
+
 input[type="text"], input[type="password"] {
     display: block;
     padding-left: 3%;
@@ -204,12 +237,18 @@ input[type="text"], input[type="password"] {
 }
 
 input[type="text"]:hover, input[type="password"]:hover {
+    background-color: #e2e2e2;
 }
 form {
     margin: 0;
 }
 
+.checkbox {
+    display: inline-flex;
+    padding: 3%;
+    margin: 3%;
 
+}
 
 /*---- MEDIA --- QUERIES ----*/
 
@@ -217,24 +256,36 @@ form {
     h1 {
         font-size: 2em;
     }
-    h2.section-title, .subtitle {
+
+    h2 {
         font-size: 2em;
-        line-height: 2.25em;
     }
+
     #login_form {
-        width: 70%;
-        margin: 0 auto;
-        padding: 1%;
+        width: 80%;
+        margin: 15% auto;
+        padding: 3%;
 
     }
 }
 
 @media only screen and (max-width: 540px) {
 
+    h2 {
+        font-size: 2em;
+    }
+
     #login_form {
-        width: 90%;
-        margin: 0 auto;
-        padding: 1%;
+        width: 80%;
+        margin: 15% auto;
+        padding: 3% 1%;
+    }
+    input[type="text"], input[type="password"]  {
+        font-size: .7em;
+    }
+
+    .navbar-brand {
+        max-width: 50%;
     }
 
 }
@@ -243,12 +294,22 @@ form {
         font-size: 2em;
     }
 
+    h2 {
+        font-size: 2em;
+    }
+
+    input[type="text"], input[type="password"]  {
+        font-size: .7em;
+    }
+
     #login_form {
-        width: 90%;
-        margin: 0 auto;
-        padding: 1%;
+        width: 80%;
+        margin: 15% auto;
+        padding: 3% 1%;
 
     }
+
+
 
 }
 
