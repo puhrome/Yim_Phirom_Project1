@@ -13,19 +13,20 @@
 
         <h2>Login</h2>
 
-        <?php
-        echo form_open('login/validate_credentials');
-        echo form_input('username', 'Username');
-        echo form_password('password', 'Password');
-        ?>
+<!--        --><?php
+//        echo form_open('login/validate_credentials');
+//        echo form_input('username', 'Username');
+//        echo form_password('password', 'Password');
+//        ?>
+
 
     <div class="checkbox container-fluid">
         <input type="checkbox" value="remember-me"> Remember me
     </div>
 
-        <?php
-        echo form_submit('submit', 'Login');
-        ?>
+<!--        --><?php
+//        echo form_submit('submit', 'Login');
+//        ?>
 
         <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" value="Create Account" id="btn">Create Account</button>
         <div class="collapse" id="collapseExample">

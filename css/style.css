@@ -47,7 +47,8 @@ body {
     padding: 0;
 }
 .well {
-    background-color: #d4d4d4;
+    background-color: #00B5B5;
+
 }
 /*---- Header, h1, h2, p, footer -- Styling---*/
 
@@ -151,7 +152,6 @@ input, form>a, #btn {
     margin: 2% 3%;
     border: none;
     border-radius: 3px;
-    color: #3E4651;
     text-transform: uppercase;
     font-family: "Helvetica", Arial, sans-serif;
     font-size: .75em;
@@ -161,7 +161,7 @@ input, form>a, #btn {
 }
 
 input:hover {
-    background-color: #C5D8D7;
+    background-color: #d4d4d4;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -169,36 +169,24 @@ input:hover {
 
 }
 
-input[type="submit"], {
-    background-color:  #d4d4d4;
-    text-align: center;
-    border-radius: 1px;
-    border: none;
-    color: #fff;
-    text-transform: uppercase;
-}
-input[type="submit"]:hover,  {
-    background-color: #3E4651;
-    color: #d4d4d4;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
-}
 
-input[type="button"] {
+input[type="submit"] {
     background-color: #00B5B5;
     color: #ffffff;
+}
+
+input[type="submit"]:hover {
+    background-color: #e2e2e2;
+    color: #00B5B5;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
-
 }
 
 input[type="button"]:hover {
-    background-color: #ffffff;
-    color: #222;
+    background-color: #e2e2e2;
+    color: #00B5B5;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -208,7 +196,7 @@ input[type="button"]:hover {
 input[type="checkbox"] {
     margin: 3%;
 }
-form a, #btn  {
+form a, #btn, input[type="button"]  {
     color: #ffffff;
     display: block;
     width: 95%;
@@ -216,8 +204,8 @@ form a, #btn  {
     text-align: center;
 }
 
-form a:hover, #btn:hover  {
-    background-color: #d4d4d4;
+form a:hover, #btn:hover, input[type="button"]:hover  {
+    background-color: #e2e2e2;
     text-decoration: none;
     color: #3E4651;
     -webkit-transition: all .5s ease-in-out;
@@ -236,9 +224,6 @@ input[type="text"], input[type="password"] {
 
 }
 
-input[type="text"]:hover, input[type="password"]:hover {
-    background-color: #e2e2e2;
-}
 form {
     margin: 0;
 }

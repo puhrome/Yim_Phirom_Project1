@@ -11,6 +11,7 @@ class Shopping extends CI_Controller
         $this->load->database();
     }
 
+
     public function index(){
 
         $data = array();
@@ -27,25 +28,27 @@ class Shopping extends CI_Controller
         $users->load(1);
         $data['user'] = $users;
 
-//        echo '<pre>' . var_export($users, TRUE) . '</pre>';
-
+//        function validate_credentials()
+//        {
+//            $this->load->model('membership_model');
+//            $query = $this->membership_model->validate();
 //
-//        //load Items Model
-//        $this->load->model('Items');
-//        $this->Items->itemName = "Ethiopia";
-//        $this->Items->save();
-////        echo '<pre>' . var_export($this->Items, TRUE) . '</pre>';
+//            if($query) //if the user's credentials validated..
+//            {
+//                $data = array(
+//                    'username' => $this->input->post('username'),
+//                    'is_logged_in' => TRUE //add values to session
+//                );
 //
-//        //load Users Model
-//        $this->load->model('Users');
-//        $users = new Users();
-//        $users->itemId = $this->Items->itemId;
-//        $users->firstName = 'Jane';
-//        $users->lastName = 'Doe';
-//        $users->username = 'jdoe345';
-//        $users->save();
-////        echo '<pre>' . var_export($users, TRUE) . '</pre>';
-
+//                $this->session->set_userdata($data); // take info add to user session id
+//                redirect('site/members_area');
+//            }
+//
+//            else
+//            {
+//                $this->index();
+//            }
+//        }
         //$this method loads the view
         $data['main_content'] = 'login_form'; //create a new key for this variable to load in view
 
