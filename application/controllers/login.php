@@ -2,15 +2,21 @@
 
 class Login extends CI_Controller {
 
-    function __construct()
+    public function index()
     {
-        parent::__construct();
+        $this->load->helper(array('form', 'url'));
+
+        $this->load->library('form_validation');
+
+        if ($this->form_validation->run() == FALSE)
+        {
+            $this->load->view('members');
+        }
+        else
+        {
+            $this->load->view('success_view');
+        }
     }
 
-    function index()
-    {
-        $this->load->helper(array('form'));
-        $this->load->view('login_view');
-    }
 
 }
