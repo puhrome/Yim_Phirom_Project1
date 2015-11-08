@@ -1,7 +1,6 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Membership_model extends MY_Model {
+class Membership extends CI_Controller {
 
     function login_validation()
     {
@@ -9,11 +8,10 @@ class Membership_model extends MY_Model {
         $this->db->where('password', md5($this->input->post('password')));
         $query = $this->db->where('users');
 
-        if($query->num_rows = 1); //if 1 row is returned, then they are member
+        if ($query->num_rows = 1) ; //if 1 row is returned, then they are member
         {
             return TRUE;
         }
-
     }
 
 }
