@@ -56,6 +56,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * This method will route you default welcome page to your main application page
  * */
 
-$route['default_controller'] = 'shopping'; //change from default 'welcome' controller class
+$route['default_controller'] = 'main'; //change from default 'welcome' controller class
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
