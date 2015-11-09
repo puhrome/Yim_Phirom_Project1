@@ -34,8 +34,7 @@ class Shopping extends CI_Controller
         $this->load->model('Items');
         $this->Items->itemName = "Ethiopia";
         $this->Items->save();
-//        echo '<pre>' . var_export($this->Items, TRUE) . '</pre>';
-
+//        echo '<pre>' . var_export($this->Items, TRUE) . '</pre>'
         //load Users Model
         $this->load->model('Users');
         $users = new Users();

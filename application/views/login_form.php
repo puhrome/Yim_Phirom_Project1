@@ -16,9 +16,9 @@
         <?php echo validation_errors(); ?>
 
         <?php
-        echo form_open('membership/login_validation'); //controller, function
+        echo form_open('main/login_validation'); //controller, function
         echo '<h3> Username </h3>';
-        echo form_input('username', ''); //name, value
+        echo form_input('username', '', 'Enter Username'); //name, value
         echo '<h3> Password </h3>';
         echo form_password('password', '', 'required|md5');
         echo form_submit('submit', 'Login'); //name, value
@@ -30,7 +30,7 @@
             <div class="well">
                 <?php echo validation_errors(); ?>
 
-                <?php echo form_open('membership/login_validation');
+                <?php echo form_open('main/login_validation');
 
                 echo validation_errors();
                 echo '<h3> Username </h3>';

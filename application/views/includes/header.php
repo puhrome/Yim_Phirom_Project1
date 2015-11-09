@@ -10,7 +10,9 @@
     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <!-- Bootstrap -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" <?php echo base_url('css/style.css');?>/>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,7 +22,9 @@
     <![endif]-->
     <!-- Jquery Code--->
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="assets/js/jquery/jquery-ui.min.js"></script>
     <script src="assets/js/jquery/jquery.js"  type="javascript"></script>
+    <script src="assets/js/script.js"  type="javascript"></script>
 
     <script>
         $(document).ready(function(){
