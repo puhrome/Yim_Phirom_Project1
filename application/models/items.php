@@ -19,4 +19,10 @@ class Items extends MY_Model
     //var - string
     public $primaryImage;
 
+    public function getItems(){
+        $query = $this->db->get('items');
+        return $query->result_array();
+
+
+    }
 }

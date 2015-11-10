@@ -2,6 +2,8 @@
 
 class Login extends CI_Controller {
 
+
+
     public function index()
     {
         $this->load->helper(array('form', 'url'));
@@ -10,7 +12,7 @@ class Login extends CI_Controller {
 
         if ($this->form_validation->run() == FALSE)
         {
-            $this->load->view('members');
+            $this->load->view('members_area');
         }
         else
         {

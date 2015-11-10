@@ -7,34 +7,40 @@ class Main extends CI_Controller{
         parent::__construct();
 
         $this->load->database();
+
+        $this->load->model('Items');
+        $this->load->model('Users');
+
+        $this->load->helper('security'); //security helper for xss_clean
+
     }
 
     public function index(){
 
-//        $this->login();
+        //$data = array();
 
-//        $data = array();
-//        $this->load->model('Items');
-//        $items = new Items();
-//        $items->load(1);
-//        $data['items'] = $items;
-//
-//        echo '<pre>' . var_export($items, TRUE) . '</pre>';
-//
-//
-//        $this->load->model('Users');
-//        $users = new Users();
-//        $users->load(1);
-//        $data['user'] = $users;
-//
-//        echo '<pre>' . var_export($users, TRUE) . '</pre>';
-//
-//
+
+        //$items->load(1);
+        //$data['items'] = $this->Items->getItems();
+
+        //$data['users'] = $this->Users->getUsers();
+
+        $this->load->view('home'); //load navigation view
+
+        //var_dump($data);
+
+
+        //$users->load(1);
+        //$data['user'] = $users;
+
+//        $this->load->view('login', $data); //load shopping cart (main) view
+
+
 //        //load Items Model
 //        $this->load->model('Items');
 //        $this->Items->itemName = "Ethiopia";
 //        $this->Items->save();
-////        echo '<pre>' . var_export($this->Items, TRUE) . '</pre>'
+//
 //        //load Users Model
 //        $this->load->model('Users');
 //        $users = new Users();
@@ -43,26 +49,27 @@ class Main extends CI_Controller{
 //        $users->lastName = 'Doe';
 //        $users->username = 'jdoe345';
 //        $users->save();
-//        echo '<pre>' . var_export($users, TRUE) . '</pre>';
 
         //$this method loads the view
-        $data['main_content'] = 'login_form'; //create a new key for this variable to load in view
+//        $data['main_content'] = 'login_form'; //create a new key for this variable to load in view
 
-        $this->load->view('templates/navigation'); //load navigation view
         //
 
-        $this->load->view('shopping_cart',$data); //load shopping cart (main) view
+
+//        $this->load->view('shopping_cart',$data); //load shopping cart (main) view
         //
         //        $this->load->view('templates/footer'); //load footer view
 
-        $this->load->view('includes/template', $data); //load template with two parameters, template and $data(main_content) variable
-
-        $this->load->library('cart');
+//        $this->load->view('includes/template', $data); //load template with two parameters, template and $data(main_content) variable
+//
+//        $this->load->library('cart');
 
     }
 
+
     public function login(){
         $this->load->view('login_form');
+
     }
 
     public function members(){
@@ -79,10 +86,10 @@ class Main extends CI_Controller{
 
         if($this->form_validation->run() == FALSE)
         {
+
             //$this method loads the view
             $data['main_content'] = 'login_form'; //create a new key for this variable to load in view
 
-            $this->load->view('templates/navigation'); //load navigation view
 
             $this->load->view('shopping_cart',$data); //load shopping cart (main) view
 
@@ -103,7 +110,7 @@ class Main extends CI_Controller{
         $username = $this->input->post('username');
 
         //query the database
-        $result = $this->user->login($username, $password);
+        $result = $this->Users->login($username, $password);
 
         if($result)
         {
