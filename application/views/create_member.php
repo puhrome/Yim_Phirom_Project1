@@ -74,22 +74,28 @@
 
         <h1>Hello,</h1>
 
-        <h2>Login</h2>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" value="Create Account" id="btn">Create Account</button>
+        <div class="collapse" id="collapseExample">
+            <div class="well">
+                <?php echo validation_errors(); ?>
 
-        <?php echo validation_errors(); ?>
+                <?php echo form_open('/index.php/main/login_validation');
+                //Show me what you got for your new user controller
 
+                echo validation_errors();
+                echo '<h3> Username </h3>';
+                echo form_input('username', ''); //name, value
+                echo '<h3> Email </h3>';
+                echo form_input('email', '');
+                echo '<h3> Password </h3>';
+                echo form_password('password', '');
+                echo form_submit('submit', 'Create'); //name, value
+                echo form_close();
 
-        <?php
-        echo form_open('/index.php/main/login_validation'); //controller, function
-        echo '<h3> Username </h3>';
-        echo form_input('username', '', 'Enter Username'); //name, value
-        echo '<h3> Password </h3>';
-        echo form_password('password', '');
-        echo form_submit('submit', 'Login'); //name, value
-        echo form_close();
-        ?>
+                ?>
 
-        <button class="btn btn-primary" type="button" id="btn"> <a href="/index.php/main/create">Create Account</a></button>
+            </div>
+        </div>
 
     </div>
 </div>

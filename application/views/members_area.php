@@ -72,9 +72,7 @@
     </div>
 
 </div>
-<h1>Hello, <?php
-            echo $user;
-    ?></h1>
+<h1>Hello, </h1>
 
 <footer>
     <h1>Footer Part</h1>

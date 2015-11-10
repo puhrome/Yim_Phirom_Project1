@@ -72,14 +72,11 @@ class Main extends CI_Controller{
         //$this method loads the view
         $data['main_content'] = 'login_form'; //create a new key for this variable to load in view
 
-        $this->load->view('shopping_cart',$data); //load shopping cart (main) view
 
         $this->load->view('includes/template', $data); //load template with two parameters, template and $data(main_content) variable
 
-    }
+        //I am not sure. This is my main controller. I put all my fucntions in here, how did you create that user that is in the db? In the models?
 
-    public function members(){
-        $this->load->view('members_area');
     }
 
     public function login_validation(){
@@ -87,10 +84,13 @@ class Main extends CI_Controller{
         //This method will have the credentials validation
         $this->load->library('form_validation');
 
+        //set rules to validate username and callback
         $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
-        $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|callback_check_database');
+        $this->form_validation->set_rules('password', 'Password', 'trim|required|md5|callback_check_database'); //okay well here your not hashing the input
 
+        //if it validation is FALSE
         if($this->form_validation->run() == FALSE)
+            //load this view for redirect and login
         {
 
             //$this method loads the view
@@ -102,15 +102,19 @@ class Main extends CI_Controller{
             $this->load->view('includes/template', $data); //load template with two parameters, template and $data(main_content) variable
 
         }
+        //or else route to members page
         else
         {
             //Go to private area
-            redirect('members_area', 'refresh');
+            $this->load->view('members_area');
         }
 
     }
 
+
+
     public function check_database($password)
+        //this method checks database
     {
         //Field validation succeeded.  Validate against database
         $username = $this->input->post('username');
@@ -124,8 +128,8 @@ class Main extends CI_Controller{
             foreach($result as $row)
             {
                 $sess_array = array(
-                    'id' => $row->id,
-                    'username' => $row->username
+                    'id' => $row->userId,
+                    'username' => $row->userName
                 );
                 $this->session->set_userdata('logged_in', $sess_array);
             }
@@ -138,7 +142,25 @@ class Main extends CI_Controller{
         }
     }
 
+    public function create(){
+
+        $this->load->view('create_member');
+        //Okay, now I suppose you could use this to load the view as you have then post back to it with the data
+        //Then once you have data you just do If ($POST etc... and that way you can use the controller for both
+        //before and after the form is filled out, now with regards to validation, you'll need a separate
+        //check_database unless you want to specify weather it's a new user or login and then run an IF in the
+        //check database but essentially all you need to validate in this case besides the same form_validation
 
 
+
+
+
+    }
+
+    public function members(){
+        //method to load members page
+        $this->load->view('members_area');
+
+    }
 
 }
