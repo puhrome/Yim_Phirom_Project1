@@ -10,14 +10,8 @@ class Login extends CI_Controller {
 
         $this->load->library('form_validation');
 
-        if ($this->form_validation->run() == FALSE)
-        {
-            $this->load->view('members_area');
-        }
-        else
-        {
-            $this->load->view('success_view');
-        }
+        $this->load->view('home');
+
     }
 
 

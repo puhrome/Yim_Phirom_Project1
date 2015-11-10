@@ -41,13 +41,31 @@ body {
     border: 4px solid #F1654C;
 
 }
-
 .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.container-fluid {
     width: 100%;
     padding: 0;
 }
 .well {
-    background-color: #d4d4d4;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+#home .jumbotron {
+    background: url("/assets/images/coffee_beans.jpg") no-repeat center fixed;
+    border: none;
+    height: 30%;
+    border-radius: 0;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10% 3%;
+    text-align: center;
+    opacity: .7;
+
 }
 /*---- Header, h1, h2, p, footer -- Styling---*/
 
@@ -56,7 +74,7 @@ h1 {
     text-transform: uppercase;
 }
 
-h2 {
+h2, {
     font-family: 'Learning Curve','Pacifico', "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0 auto;
     color: #ffffff;
@@ -72,7 +90,7 @@ h2 {
 }
 
 
-h3, p, a {
+ h3, p, a {
     font-family: 'Avenir', cursive;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -87,6 +105,33 @@ footer {
     padding: 10% 0 20%;
     margin: 0 auto;
 }
+
+#home p, #home a {
+    font-size: 2em;
+    text-transform: none;
+}
+
+#home h1 {
+    color: #ffffff;
+    font-size: 5em;
+    text-align: center;
+    text-shadow: 4px 2px 2px #3E4651;
+    padding: 2%;
+
+}
+
+#home h4 {
+    font-family: 'Learning Curve','Pacifico', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #ddd;
+    font-size: 5em;
+    text-align: center;
+    padding: 1%;
+    text-shadow: 1px 1px #3E4651;
+
+
+}
+
+
 /*---- Navigation, ul, li, a -- Styling---*/
 
 
@@ -243,11 +288,46 @@ form {
     margin: 0;
 }
 
-.checkbox {
-    display: inline-flex;
-    padding: 3%;
-    margin: 3%;
 
+/* ---- CAROUSEL --- */
+
+.carousel,.item,.active{
+    height: 100%;
+    padding: 0;
+}
+.carousel-inner{
+    height: 100%;
+}
+
+.carousel-control {
+    top: 50%;
+    bottom: 50%;
+    font-size: 5em;
+    background-color: transparent;
+    color: #ffffff;
+}
+.images{
+    height:100%;
+    margin: 0 auto;
+}
+
+/* faster sliding speed */
+.carousel-inner > .item {
+    -webkit-transition: 0.3s ease-in-out left;
+    -moz-transition: 0.3s ease-in-out left;
+    -o-transition: 0.3s ease-in-out left;
+    transition: 0.3s ease-in-out left;
+}
+ #myCarousel {
+     margin: 1% 0 15% ;
+     background-color: #fff;
+ }
+/* keep full widget on smaller screens */
+@media (max-width: 767px) {
+    body {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 /*---- MEDIA --- QUERIES ----*/

@@ -63,7 +63,7 @@ class Users extends MY_Model{
     }
 
 
-    public function new_member()
+    public function members()
     {
         $enc_password = md5($this->input->post('password'));
 

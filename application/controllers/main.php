@@ -67,8 +67,14 @@ class Main extends CI_Controller{
     }
 
 
-    public function login(){
-        $this->load->view('login_form');
+    public function login(){ //method to tell what to view with login model
+
+        //$this method loads the view
+        $data['main_content'] = 'login_form'; //create a new key for this variable to load in view
+
+        $this->load->view('shopping_cart',$data); //load shopping cart (main) view
+
+        $this->load->view('includes/template', $data); //load template with two parameters, template and $data(main_content) variable
 
     }
 
