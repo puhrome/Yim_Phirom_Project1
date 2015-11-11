@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,18 +25,10 @@
     <script src="/assets/js/jquery/jquery.js"  type="javascript"></script>
     <script src="/assets/js/script.js"  type="javascript"></script>
 
-    <script>
-        $(document).ready(function(){
-            $("button").click(function(){
-                $("p").toggle();
-            });
-        });
-    </script>
 
 </head>
 <body>
-
-<div class="container" >
+<div class="container-fluid">
     <nav class="navbar navbar-inverse navbar-default">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -55,46 +46,30 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav" id="menu">
                     <li><a href="/index.php/main">Home</a></li>
+
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/index.php/logout">Sign Out</a></li>
+                    <li class="dropdown" id="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="img-responsive" id="img_log"><img src="/assets/images/login_icon_03.png" height="30" width="30"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/index.php/main/login">Sign In</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
 </div>
-<div class="container input-group" id="login_form">
-    <div class="container-fluid">
-
-        <h1>Hello,</h1>
-
-        <h4>Login</h4>
-
-        <?php echo validation_errors(); ?>
-
-
-        <?php
-        echo form_open('/index.php/main/login_validation'); //controller, function
-        echo '<h3> Username </h3>';
-        echo form_input('username', '', 'Enter Username'); //name, value
-        echo '<h3> Password </h3>';
-        echo form_password('password', '');
-        echo form_submit('submit', 'Login'); //name, value
-        echo form_close();
-        ?>
-
-        <button class="btn btn-primary" type="button" id="btn"> <a href="/index.php/main/create">Create Account</a></button>
-
-    </div>
+<div class="container">
+<h1>Thanks for stopping by!</h1>
 </div>
-
-
-<footer>
-    <h1>Footer Part</h1>
-    <span>&copy 2015 P. Yim | All rights reserved.</span>
-</footer>
-
+<div class="container-fluid">
+    <footer>
+        <h1>Footer Part</h1>
+        <span>&copy 2015 P. Yim | All rights reserved.</span>
+    </footer>
+</div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->

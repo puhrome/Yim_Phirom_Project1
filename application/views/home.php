@@ -59,10 +59,9 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown" id="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="img-responsive" id="img_log"><img src="assets/images/login_icon_03.png" height="30" width="30"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="img-responsive" id="img_log"><img src="/assets/images/login_icon_03.png" height="30" width="30"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="/index.php/main/login">Sign In</a></li>
-                            <li><a href="#">Sign Out</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -75,10 +74,11 @@
     <div class="container jumbotron">
         <h1>Arabica Coffee Trade Company</h1>
         <h4>estd. 2015</h4>
+
     </div>
 
     <div class="paragraph container">
-        <h1>About</h1>
+        <h3>About</h3>
         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
     </div>
 <div class="container">

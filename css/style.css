@@ -120,13 +120,24 @@ footer {
 
 }
 
-#home h4 {
-    font-family: 'Learning Curve','Pacifico', "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #ddd;
+ #home h4 {
     font-size: 5em;
     text-align: center;
     padding: 1%;
-    text-shadow: 1px 1px #3E4651;
+     color: #d4d4d4;
+
+
+}
+#login_form h4 {
+    padding: 3%;
+    font-size: 2em;
+    color: #ffffff;
+
+}
+
+#home h4, #login_form h4 {
+    font-family: 'Learning Curve','Pacifico', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-shadow: 1px 1px #222;
 
 
 }
