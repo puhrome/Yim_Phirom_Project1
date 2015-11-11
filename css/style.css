@@ -42,9 +42,9 @@ body {
 
 }
 .container {
-    width: 100%;
-    padding: 0;
-    margin: 0;
+    width: 80%;
+    padding: 2%;
+    margin: 0 auto;
 }
 .container-fluid {
     width: 100%;
@@ -69,12 +69,12 @@ body {
 }
 /*---- Header, h1, h2, p, footer -- Styling---*/
 
-h1 {
+h1, h3 {
     font-family: 'Bebas', "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
 }
 
-h2, {
+h2 {
     font-family: 'Learning Curve','Pacifico', "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0 auto;
     color: #ffffff;
@@ -83,6 +83,18 @@ h2, {
     font-size: 3em;
     padding: 2% 3% 1%;
 }
+
+h3 {
+    font-size: 2em;
+    letter-spacing: 3px;
+    text-align: center;
+    padding: 1%;
+    margin: 3% auto;
+    color: #F1654C;
+    text-shadow: 2px 2px 1px #d4d4d4;
+
+
+}
 #login_form h1{
     text-align: center;
     padding: 3%;
@@ -90,13 +102,14 @@ h2, {
 }
 
 
- h3, p, a {
+p, a {
     font-family: 'Avenir', cursive;
     letter-spacing: 1px;
     text-transform: uppercase;
     font-size: .75em;
     padding: 0 3%;
 }
+
 footer {
     background-color: #3E4651;
     border: 1px solid #3E4651;
