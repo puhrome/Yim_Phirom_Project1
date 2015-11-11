@@ -56,7 +56,7 @@ body {
     border: none;
 }
 #home .jumbotron {
-    background: url("/assets/images/coffee_beans.jpg") no-repeat center fixed;
+    background: url("/assets/images/espresso_machine.jpg") no-repeat center fixed;
     border: none;
     height: 30%;
     border-radius: 0;
@@ -64,7 +64,6 @@ body {
     margin: 0 auto;
     padding: 10% 3%;
     text-align: center;
-    opacity: .7;
 
 }
 /*---- Header, h1, h2, p, footer -- Styling---*/
@@ -133,7 +132,7 @@ footer {
 
 }
 
- #home h4 {
+#home h4 {
     font-size: 5em;
     text-align: center;
     padding: 1%;
@@ -143,7 +142,7 @@ footer {
 }
 #login_form h4 {
     padding: 3%;
-    font-size: 2em;
+    font-size: 4em;
     color: #ffffff;
 
 }
@@ -156,14 +155,27 @@ footer {
 }
 
 
+form h3 {
+    font-size: 1em;
+    color: #d4d4d4;
+    padding: 0 3%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-shadow: none;
+    text-align: left;
+    letter-spacing: 1px;
+
+
+}
+
+
 /*---- Navigation, ul, li, a -- Styling---*/
 
 
 .navbar, .navbar-inverse {
     border-radius: 0;
-    background-color: #3E4651;
-    color: #d4d4d4;
-    border: 1px solid #3E4651;
+    background-color: #fff;
+    color: #F1654C;
+    border: 2px solid #ffffff;
     width: 100%;
     margin: 0 auto;
     padding: 0 5%;
@@ -174,6 +186,8 @@ footer {
 #menu {
     padding: 0;
     margin: 0 auto;
+    color: #3E4651;
+    width: 70%;
 }
 #img_log {
     margin: 1%;
@@ -183,15 +197,12 @@ footer {
     margin: -12px 0;
 }
 
-#menu>#logo a:hover{
-
-}
 
 a.dropdown-toggle:hover#img_log {
     background-color: transparent;
 }
 
-#menu a:hover{
+#menu li>a:hover{
     color: #fff;
     background-color: #F1654C;
     -webkit-transition: all .5s ease-in-out;
@@ -203,12 +214,9 @@ a.dropdown-toggle:hover#img_log {
     padding: 0;
     margin: -5px;
 }
-#dropdown>a:hover {
-    background-color: transparent;
 
-}
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
-    background-color: transparent;
+    background-color: #d4d4d4;
 }
 
 /*---- Form, Input, & Button -- Styling---*/
@@ -417,5 +425,22 @@ form {
 
 @media only screen and (max-width: 360px) {
 
+    h1 {
+        font-size: 2em;
+    }
 
+    h2 {
+        font-size: 2em;
+    }
+
+    input[type="text"], input[type="password"]  {
+        font-size: .7em;
+    }
+
+    #login_form {
+        width: 80%;
+        margin: 15% auto;
+        padding: 3% 1%;
+
+    }
 }
