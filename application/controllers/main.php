@@ -6,10 +6,10 @@ class Main extends CI_Controller{
     {
         parent::__construct();
 
-        $this->load->database();
+        $this->load->database(); //automatically load db
 
-        $this->load->model('Items');
-        $this->load->model('Users');
+        $this->load->model('Items'); //automatically load Items model
+        $this->load->model('Users'); //automatically load Users model
 
         $this->load->helper('security'); //security helper for xss_clean
 
@@ -52,9 +52,9 @@ class Main extends CI_Controller{
         {
 
             //$this method loads the view
-            $data['main_content'] = 'login_form'; //create a new key for this variable to load in view
+//            $data['main_content'] = 'login_form'; //create a new key for this variable to load in view
 
-            $this->load->view('includes/header', $data); //load template with two parameters, template and $data(main_content) variable
+            $this->load->view('login_form', 'login_validation'); //load template with two parameters, template and $data(main_content) variable
 
         }
         //or else route to members page
@@ -71,6 +71,9 @@ class Main extends CI_Controller{
     public function check_database($password)
         //this method checks database
     {
+
+        $this->load->library('form_validation');
+
         //Field validation succeeded.  Validate against database
         $username = $this->input->post('username');
 
@@ -95,9 +98,6 @@ class Main extends CI_Controller{
         else
         {
 
-            //This method will have the credentials validation
-            $this->load->library('form_validation');
-
             //set rules to validate username and callback
             $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
             $this->form_validation->set_rules('password', 'Password', 'trim|required|md5|callback_check_database');
@@ -112,29 +112,35 @@ class Main extends CI_Controller{
         }
     }
 
-    //model set up to create new members in a db
-    public function create()
+
+    public function members()
     {
-        $enc_password = md5($this->input->post('password')); //set password to md5 hashing
-
-        //data array to input username, password, and email into database
-        $data = array(
-            'username' => $this->input->post('username'),
-            'password' => $enc_password,
-            'email' => $this->input->post('email')
-        );
-
-        //insert this new user and data array into database
-        $insert = $this->db->insert('users', $data);
-
-        //return database insert
-        return $insert;
-    }
-
-    public function members(){
-
+        $this->load->model('create');
         //method to load members page
         $this->load->view('members_area');
+
+        //if it validation is FALSE
+        if($this->create->run() == FALSE)
+            //load this view for redirect and login
+        {
+
+            //$this method loads the view
+            $data['main_content'] = 'login_form'; //create a new key for this variable to load in view
+
+            $this->load->view('includes/header', $data); //load template with two parameters, template and $data(main_content) variable
+
+        }
+        //or else route to members page
+        else
+        {
+            $data['username'] = $this->input->post('username');
+
+            //Go to private area
+            $this->load->view('members_area', $data);
+        }
+
+
+
 
     }
 

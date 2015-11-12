@@ -49,7 +49,9 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#home">About</a></li>
                     <li><a href="#myCarousel">Gallery</a></li>
-                    <li><a href="/index.php/main/login">Sign In</a></li>
+                    <li><a href="/index.php/main/login">Login</a></li>
+                    <li><a href="/index.php/main/create">Sign Up</a></li>
+
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
