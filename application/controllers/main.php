@@ -13,6 +13,8 @@ class Main extends CI_Controller{
 
         $this->load->helper('security'); //security helper for xss_clean
 
+
+
     }
 
     public function index(){
@@ -34,7 +36,8 @@ class Main extends CI_Controller{
         }
     }
 
-    public function login_validation(){
+    public function login_validation()
+    {
 
         //This method will have the credentials validation
         $this->load->library('form_validation');
@@ -51,22 +54,19 @@ class Main extends CI_Controller{
             //$this method loads the view
             $data['main_content'] = 'login_form'; //create a new key for this variable to load in view
 
-
-            $this->load->view('shopping_cart',$data); //load shopping cart (main) view
-
-            $this->load->view('includes/template', $data); //load template with two parameters, template and $data(main_content) variable
+            $this->load->view('includes/header', $data); //load template with two parameters, template and $data(main_content) variable
 
         }
         //or else route to members page
         else
         {
+            $data['username'] = $this->input->post('username');
+
             //Go to private area
-            $this->load->view('members_area');
+            $this->load->view('members_area', $data);
         }
 
     }
-
-
 
     public function check_database($password)
         //this method checks database
@@ -82,7 +82,6 @@ class Main extends CI_Controller{
 
         {
             $sess_array = array();
-
             foreach($result as $row)
             {
                 $sess_array = array(
@@ -95,8 +94,21 @@ class Main extends CI_Controller{
         }
         else
         {
+
+            //This method will have the credentials validation
+            $this->load->library('form_validation');
+
+            //set rules to validate username and callback
+            $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
+            $this->form_validation->set_rules('password', 'Password', 'trim|required|md5|callback_check_database');
+
+            //if it validation is FALSE
+            if($this->form_validation->run() == FALSE)
+
             $this->form_validation->set_message('check_database', 'Invalid username or password');
-            return false;
+            $this->load->view('login_form');
+            return FALSE;
+
         }
     }
 

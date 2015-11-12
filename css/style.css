@@ -66,6 +66,8 @@ body {
     text-align: center;
 
 }
+
+
 /*---- Header, h1, h2, p, footer -- Styling---*/
 
 h1, h3 {
@@ -89,8 +91,7 @@ h3 {
     text-align: center;
     padding: 1%;
     margin: 3% auto;
-    color: #F1654C;
-    text-shadow: 2px 2px 1px #d4d4d4;
+    color: #3E4651;
 
 
 }
@@ -110,12 +111,12 @@ p, a {
 }
 
 footer {
-    background-color: #3E4651;
-    border: 1px solid #3E4651;
-    color: #d4d4d4;
+    color: #ffffff;
     text-align: center;
-    padding: 10% 0 20%;
+    padding: 5%;
     margin: 0 auto;
+    background: url("/assets/images/espresso_machine.jpg") no-repeat center fixed;
+
 }
 
 #home p, #home a {
@@ -154,6 +155,10 @@ footer {
 
 }
 
+#bye h1 {
+    text-align: center;
+    padding: 2%;
+}
 
 form h3 {
     font-size: 1em;
@@ -166,22 +171,30 @@ form h3 {
 
 
 }
-
+ footer h1 {
+     padding: 10%;
+     text-shadow: 4px 2px 2px #3E4651;
+     letter-spacing: 2px;
+     margin: 0 auto;
+ }
 
 /*---- Navigation, ul, li, a -- Styling---*/
 
 
-.navbar, .navbar-inverse {
+.navbar {
     border-radius: 0;
-    background-color: #fff;
     color: #F1654C;
-    border: 2px solid #ffffff;
     width: 100%;
     margin: 0 auto;
     padding: 0 5%;
+    background: transparent;
+    border: none;
 }
 .navbar-inverse .navbar-brand {
     color: #F1654C;
+}
+#myNav {
+    background: transparent;
 }
 #menu {
     padding: 0;
@@ -387,6 +400,10 @@ form {
         font-size: 2em;
     }
 
+    p {
+        font-size: 1em;
+    }
+
     #login_form {
         width: 80%;
         margin: 15% auto;
@@ -410,6 +427,10 @@ form {
         font-size: 2em;
     }
 
+    p {
+        font-size: 1em;
+    }
+
     input[type="text"], input[type="password"]  {
         font-size: .7em;
     }
@@ -431,6 +452,10 @@ form {
 
     h2 {
         font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
     }
 
     input[type="text"], input[type="password"]  {
