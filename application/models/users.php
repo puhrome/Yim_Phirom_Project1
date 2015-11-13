@@ -97,23 +97,7 @@ class Users extends MY_Model{
         return false;
     }
 
-    public function create()
-    {
-        $enc_password = md5($this->input->post('password')); //set password to md5 hashing
 
-        //data array to input username, password, and email into database
-        $data = array(
-            'username' => $this->input->post('username'),
-            'password' => $enc_password,
-            'userEmail' => $this->input->post('userEmail')
-        );
-
-        //insert this new user and data array into database
-        $insert = $this->db->insert('users', $data);
-
-        //return database insert
-        return $insert;
-    }
 
 
 

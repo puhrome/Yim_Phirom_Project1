@@ -40,6 +40,7 @@
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/index.php/main">Home</a></li>
+                    <li><a href="/index.php/main/members">Sign Up</a></li>
                     <li><a href="/index.php/main/login">Sign In</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->

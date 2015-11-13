@@ -3,9 +3,7 @@
 class Logout extends CI_Controller {
 
     public function index(){
-
         $this->load->view('logout_view'); //load navigation view
-
     }
 
     function signout()

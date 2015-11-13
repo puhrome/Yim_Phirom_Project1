@@ -88,8 +88,8 @@ class Main extends CI_Controller{
             foreach($result as $row)
             {
                 $sess_array = array(
-                    'id' => $row->id,
-                    'username' => $row->username
+                    'id' => $row->userId,
+                    'username' => $row->userName
                 );
                 $this->session->set_userdata('logged_in', $sess_array);
             }
@@ -113,35 +113,5 @@ class Main extends CI_Controller{
     }
 
 
-    public function members()
-    {
-        $this->load->model('create');
-        //method to load members page
-        $this->load->view('members_area');
-
-        //if it validation is FALSE
-        if($this->create->run() == FALSE)
-            //load this view for redirect and login
-        {
-
-            //$this method loads the view
-            $data['main_content'] = 'login_form'; //create a new key for this variable to load in view
-
-            $this->load->view('includes/header', $data); //load template with two parameters, template and $data(main_content) variable
-
-        }
-        //or else route to members page
-        else
-        {
-            $data['username'] = $this->input->post('username');
-
-            //Go to private area
-            $this->load->view('members_area', $data);
-        }
-
-
-
-
-    }
 
 }

@@ -4,6 +4,7 @@ class Cart extends CI_Controller { // Our Cart class extends the Controller clas
 
     function Cart()
     {
+        $this->load->library('cart');
         $this->load->model('cart_model'); // Load our cart model for our entire class
 
         $data['products'] = $this->cart_model->retrieve_products(); // Retrieve an array with all products

@@ -48,7 +48,7 @@
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/index.php/main">Home</a></li>
-                    <li><a href="/index.php/main/create">Sign Up</a></li>
+                    <li><a href="/index.php/main/create_members">Sign Up</a></li>
                     <li><a href="/index.php/logout">Sign Out</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
