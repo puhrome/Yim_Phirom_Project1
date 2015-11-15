@@ -11,9 +11,8 @@ class Main extends CI_Controller{
         $this->load->model('Items'); //automatically load Items model
         $this->load->model('Users'); //automatically load Users model
 
+
         $this->load->helper('security'); //security helper for xss_clean
-
-
 
     }
 
@@ -32,7 +31,6 @@ class Main extends CI_Controller{
 
             $this->load->view('includes/template', $data); //load template with two parameters, template and $data(main_content) variable
 
-            //I am not sure. This is my main controller. I put all my fucntions in here, how did you create that user that is in the db? In the models?
         }
     }
 
@@ -68,48 +66,45 @@ class Main extends CI_Controller{
 
     }
 
-    public function check_database($password)
+    public function check_database()
         //this method checks database
     {
-
         $this->load->library('form_validation');
 
+
         //Field validation succeeded.  Validate against database
-        $username = $this->input->post('username');
+//        $username = $this->input->post('username');
 
         //query the database
-        $result = $this->Users->login($username, $password);
+//        $result = $this->Users->login($username, $password);
 
+        $result = $this->db->get('users');
 
-        if($result)
+        if($result->num_rows() == 1){
+            return $result->row(0)->userId;
 
-        {
-            $sess_array = array();
-            foreach($result as $row)
-            {
-                $sess_array = array(
-                    'id' => $row->userId,
-                    'username' => $row->userName
-                );
-                $this->session->set_userdata('logged_in', $sess_array);
-            }
-            return TRUE;
-        }
-        else
-        {
-
-            //set rules to validate username and callback
-            $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
-            $this->form_validation->set_rules('password', 'Password', 'trim|required|md5|callback_check_database');
-
-            //if it validation is FALSE
-            if($this->form_validation->run() == FALSE)
-
-            $this->form_validation->set_message('check_database', 'Invalid username or password');
-            $this->load->view('login_form');
+        }else{
             return FALSE;
-
         }
+
+//        if($result)
+//
+//        {
+//            $sess_array = array();
+//            foreach($result as $row)
+//            {
+//                $sess_array = array(
+//                    'id' => $row->userId,
+//                    'username' => $row->userName
+//                );
+//                $this->session->set_userdata('logged_in', $sess_array);
+//            }
+//            return TRUE;
+//        }
+//        else
+//        {
+//            return FALSE;
+//        }
     }
 
 

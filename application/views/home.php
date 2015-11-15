@@ -11,7 +11,7 @@
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" <?php echo base_url('/css/style.css');?>/>
+    <link rel="stylesheet" href="<?php echo base_url();?>css/style.css" type="text/css"/>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -48,7 +48,6 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Home</a></li>
                     <li><a href="#home">About</a></li>
-                    <li><a href="#myCarousel">Gallery</a></li>
                     <li><a href="/index.php/main/login">Login</a></li>
                     <li><a href="/index.php/main/create">Sign Up</a></li>
 

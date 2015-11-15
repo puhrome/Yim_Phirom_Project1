@@ -29,7 +29,7 @@
 </head>
 <body>
 <div class="container-fluid">
-    <nav class="navbar navbar-inverse navbar-default">
+    <nav class="navbar navbar-collapse" id="myNav">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -40,20 +40,26 @@
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/index.php/main">Home</a></li>
-                    <li><a href="/index.php/main/members">Sign Up</a></li>
                     <li><a href="/index.php/main/login">Sign In</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
 </div>
-<div class="container" id="bye">
-<h3>Thanks for stopping by!</h3>
-</div>
 
-<div class="container-fluid">
-    <img src="/assets/images/coffee_beans2.jpg">
-</div>
-<div class="container-fluid">
 
+    <div class="container" id="bye">
+        <h3>Thanks for stopping by!</h3>
+    <img class="img-responsive" src="/assets/images/coffee_beans2.jpg">
+</div>
+<footer>
+    <h1><img src="/assets/images/aco_logo_03.png" width="80px" height="70px">Arabica Trade Co.</h1>
+    <span>&copy 2015 P. Yim | All rights reserved.</span>
+</footer>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/assets/js/bootstrap.min.js"></script>
+
+</body>
 </html>

@@ -79,7 +79,7 @@
             <div class="well">
                 <?php echo validation_errors(); ?>
 
-                <?php echo form_open('/index.php/main/create_members');
+                <?php echo form_open('/index.php/main/login_validation');
 
                 echo '<h3> Username </h3>';
                 echo form_input('username', ''); //name, value

@@ -90,10 +90,11 @@ class Shopping extends CI_Controller
 
 
     function check_database($password)
+    {
 
-        $username = $this->input->post('username');
+    }
 
-        $query->$this->db-
+
 
     }
 }

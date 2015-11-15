@@ -12,7 +12,7 @@
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" <?php echo base_url('/css/style.css');?>/>
+    <link rel="stylesheet" href="<?php echo base_url();?>css/style.css" type="text/css"/>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,7 +37,7 @@
 </head>
 <body>
 <div class="container-fluid">
-    <nav class="navbar navbar-inverse navbar-default">
+    <nav class="navbar navbar-collapse" id="myNav">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -58,7 +58,12 @@
 <div class="container input-group" id="login_form">
     <div class="container-fluid">
 
-        <h1>Hello,</h1>
+        <?php if(isset($account_created)) {; ?>
+        <?php echo $account_created;?>
+
+        <?php }else{ ?>
+            <h1>Hello,</h1>
+        <?php } ?>
 
         <h4>Login</h4>
 

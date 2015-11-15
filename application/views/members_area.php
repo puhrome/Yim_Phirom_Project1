@@ -36,7 +36,7 @@
 </head>
 <body>
 <div class="container-fluid">
-    <nav class="navbar navbar-inverse navbar-default">
+    <nav class="navbar navbar-collapse" id="myNav">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -47,6 +47,7 @@
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/index.php/main">Home</a></li>
+                    <li><a href="/index.php/cart">Shop</a></li>
                     <li><a href="/index.php/logout">Sign Out</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -55,7 +56,7 @@
 </div>
 
 <div class="container">
-<h4>Hello <span><?php echo $username; ?>!</span> </h4>
+<h4>Hello <span class="uname"><?php echo $username; ?>!</span></h4>
 </div>
 <div class="container" id="gallery">
     <div class="col-md-12">
@@ -100,11 +101,12 @@
     </div>
 </div>
 
-<footer>
-    <h1>Footer Part</h1>
-    <span>&copy 2015 P. Yim | All rights reserved.</span>
-</footer>
-
+<div class="container-fluid">
+    <footer>
+        <h1><img src="/assets/images/aco_logo_03.png" width="80px" height="70px">Arabica Trade Co.</h1>
+        <span>&copy 2015 P. Yim | All rights reserved.</span>
+    </footer>
+</div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
