@@ -49,7 +49,7 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#home">About</a></li>
                     <li><a href="/index.php/main/login">Login</a></li>
-                    <li><a href="/index.php/main/create">Sign Up</a></li>
+                    <li><a href="/index.php/main/members">Sign Up</a></li>
 
                 </ul>
             </div><!-- /.navbar-collapse -->

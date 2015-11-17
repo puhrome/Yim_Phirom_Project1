@@ -99,12 +99,12 @@ class Main extends CI_Controller{
 
     public function members()
     {
-        $this->load->model('create');
+        $this->load->model('users');
         //method to load members page
         $this->load->view('members_area');
 
         //if it validation is FALSE
-        if ($this->create_user->run() == FALSE) //load this view for redirect and login
+        if ($this->users->run() == FALSE) //load this view for redirect and login
         {
 
             //$this method loads the view
