@@ -47,21 +47,21 @@ class Users extends MY_Model{
         return $query->result_array();
     }
 
-    public function login($username, $password){
-
-        $this->db->where('username', $username);
-        $this->db->where('password', $password);
-
-
-        $result = $this->db->get('users');
-
-        if($result->num_rows() == 1){
-            return $result->row(0)->userId;
-
-        }else{
-            return FALSE;
-        }
-    }
+//    public function login($username, $password){
+//
+//        $this->db->where('username', $username);
+//        $this->db->where('password', $password);
+//
+//
+//        $result = $this->db->get('users');
+//
+//        if($result->num_rows() == 1){
+//            return $result->row(0)->userId;
+//
+//        }else{
+//            return FALSE;
+//        }
+//    }
 
 
     public function validate(){
@@ -95,6 +95,40 @@ class Users extends MY_Model{
         // If the previous process did not validate
         // then return false.
         return false;
+    }
+
+    function login($email,$password)
+    {
+        $this->db->where("email",$email);
+        $this->db->where("password",$password);
+
+        $query=$this->db->get("user");
+        if($query->num_rows()>0)
+        {
+            foreach($query->result() as $rows)
+            {
+                //add all data to session
+                $newdata = array(
+                    'id'  => $rows->userId,
+                    'username'  => $rows->userName,
+                    'email'    => $rows->userEmail,
+                    'logged_in'  => TRUE,
+                );
+            }
+            $this->session->set_userdata($newdata);
+            return true;
+        }
+        return false;
+    }
+
+    public function add_user()
+    {
+        $data=array(
+            'username'=>$this->input->post('username'),
+            'email'=>$this->input->post('email'),
+            'password'=>md5($this->input->post('password'))
+        );
+        $this->db->insert('user',$data);
     }
 
 

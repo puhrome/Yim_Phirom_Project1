@@ -70,7 +70,7 @@
         <?php echo validation_errors(); ?>
 
         <?php
-        echo form_open('/index.php/main/login_validation'); //controller, function
+        echo form_open('/index.php/login/login_validation'); //controller, function
         echo '<h3> Username </h3>';
         echo form_input('username', '', 'Enter Username'); //name, value
         echo '<h3> Password </h3>';
