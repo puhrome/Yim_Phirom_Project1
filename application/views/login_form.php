@@ -76,6 +76,7 @@
         echo '<h3> Password </h3>';
         echo form_password('password', '');
         echo form_submit('submit', 'Login'); //name, value
+        echo anchor ('index.php/main/add_user', 'Create Account');
         echo form_close();
         ?>
 
